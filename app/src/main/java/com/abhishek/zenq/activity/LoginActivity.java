@@ -45,7 +45,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+/*        https://github.com/wajahatkarim3/EasyFlipView
+* https://www.uisources.com/app/design-code
+* */
 
 
         find();
@@ -154,13 +156,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         avi.setVisibility(View.GONE);
 
         // stopLoadingDialog();
-        if ((t instanceof ApiClient.NoConnectivityException)) {
-            // Toast.makeText(this, "No internet connection", Toast.LENGTH_SHORT).show();
 
-        } else {
-            // Toast.makeText(this, "Please try later", Toast.LENGTH_SHORT).show();
-
-        }
     }
 
 
