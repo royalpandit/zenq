@@ -32,12 +32,12 @@
             android:drawablePadding="15dp"
             android:fontFamily="@font/opensans_regular"
             android:gravity="center_vertical"
-            android:hint="Enter Email or Phone"
+            android:hint="@string/hint_email"
             android:inputType="textEmailAddress"
             android:paddingLeft="15dp"
             android:textColor="@color/buttoncolor"
             android:textColorHint="@color/buttoncolor"
-            android:textSize="7pt" />
+            android:textSize="@dimen/medium_text_size" />
 
         <EditText
             android:id="@+id/editpassword"
@@ -52,12 +52,12 @@
             android:drawablePadding="15dp"
             android:fontFamily="@font/opensans_regular"
             android:gravity="center_vertical"
-            android:hint="Password"
+            android:hint="@string/hint_password"
             android:inputType="textEmailAddress"
             android:paddingLeft="15dp"
             android:textColor="@color/buttoncolor"
             android:textColorHint="@color/buttoncolor"
-            android:textSize="7pt" />
+            android:textSize="@dimen/medium_text_size" />
 
         <TextView
             android:id="@+id/forgor"
@@ -72,9 +72,9 @@
             android:fontFamily="@font/opensans_regular"
             android:gravity="center"
             android:paddingLeft="15dp"
-            android:text="Forgot Password"
+            android:text="@string/hint_forgot"
             android:textColor="@color/white"
-            android:textSize="5pt" />
+            android:textSize="@dimen/small_text_size" />
 
         <Button
             android:id="@+id/login"
@@ -88,7 +88,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/buttonborder"
             android:fontFamily="@font/opensans_regular"
-            android:text="Secure Login"
+            android:text="@string/login_btn"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="7pt" />
@@ -108,7 +108,7 @@
                 android:fontFamily="@font/opensans_regular"
                 android:text="Don't have an acccount ?"
                 android:textColor="@color/white"
-                android:textSize="5pt" />
+                android:textSize="@dimen/small_text_size" />
 
             <TextView
                 android:id="@+id/signup"
@@ -117,9 +117,9 @@
                 android:layout_marginLeft="8dp"
                 android:layout_toRightOf="@+id/dont"
                 android:fontFamily="@font/opensans_regular"
-                android:text="Sign up Now!"
+                android:text="@string/hint_sign_up"
                 android:textColor="@color/buttoncolor"
-                android:textSize="5pt" />
+                android:textSize="@dimen/small_text_size" />
         </RelativeLayout>
 
         <com.wang.avi.AVLoadingIndicatorView
