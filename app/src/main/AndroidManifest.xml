@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.abhishek.zenq">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <!--    https://codecanyon.net/item/logi-truck-react-native-theme/23565161
+        https://codecanyon.net/item/truck-tracking-driver-android-ios-app-template-html-css-ionic-3-trucksup/24083870-->
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+         android:theme="@style/AppTheme">
+        <activity android:name=".Adminfragment.ActivityAddCity"/>
+        <activity android:name=".Location.FragmentGetCity"/>
+        <activity android:name=".Adminfragment.ActivityAddState"/>
+         <activity android:name=".Adminfragment.ActivityGet_Profile_Show_KYC"/>
+        <activity android:name=".activity.RegisterActivity"/>
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name="MainActivity" />
+        <activity android:name=".activity.ActivitySplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

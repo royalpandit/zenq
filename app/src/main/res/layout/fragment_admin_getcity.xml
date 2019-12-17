@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colororange">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_white_24dp" />
+<TextView
+    android:text="City"
+    android:layout_toRightOf="@+id/back"
+    android:layout_centerVertical="true"
+    android:textColor="@color/white"
+    android:textSize="11pt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/addcity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
+
+            android:background="@color/white"
+            android:text="Add City"
+            android:textColor="@color/colororange" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/header"
+        android:id="@+id/lin_top"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <!--<TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_background"
+android:visibility="gone"
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="center"
+            android:text="Code" />
+-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/raleway_semibold"
+            android:background="@drawable/edit_background"
+
+            android:gravity="center"
+            android:text="State" />
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_background"
+
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="center"
+            android:text="City" />
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lin_top"
+        android:background="@color/white">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cityrecycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:indicatorColor="#fa0202"
+            app:indicatorName="BallPulseIndicator" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

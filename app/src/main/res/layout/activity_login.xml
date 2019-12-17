@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/logoimage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logoo" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <EditText
+            android:id="@+id/editemail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/login_bg"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="Enter Email or Phone"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="7pt" />
+
+        <EditText
+            android:id="@+id/editpassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editemail"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/login_bg"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="Password"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/forgor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editpassword"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="15dp"
+            android:drawableTint="@color/white"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:text="Forgot Password"
+            android:textColor="@color/white"
+            android:textSize="5pt" />
+
+        <Button
+            android:id="@+id/login"
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/forgor"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/buttonborder"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Secure Login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="7pt" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/dont"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/opensans_regular"
+                android:text="Don't have an acccount ?"
+                android:textColor="@color/white"
+                android:textSize="5pt" />
+
+            <TextView
+                android:id="@+id/signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/dont"
+                android:fontFamily="@font/opensans_regular"
+                android:text="Sign up Now!"
+                android:textColor="@color/buttoncolor"
+                android:textSize="5pt" />
+        </RelativeLayout>
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:indicatorColor="#fa0202"
+            app:indicatorName="BallPulseIndicator" />
+
+
+    </RelativeLayout>
+
+
+    <!--    <androidx.cardview.widget.CardView
+            android:visibility="gone"
+            android:id="@+id/card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            card_view:cardCornerRadius="@dimen/card_album_radius"
+            card_view:contentPadding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/midlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border">
+
+                <LinearLayout
+                    android:id="@+id/editcategory_spin"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/edit_background"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/editemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/editcategory_spin"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:textSize="7pt" />
+
+                <EditText
+                    android:id="@+id/editpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/editemail"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:hint="Password"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:textSize="7pt" />
+
+
+                <Button
+                    android:id="@+id/login"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/editpassword"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/buttonborder"
+                    android:text="Submit"
+                    android:layout_marginBottom="10dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="24dp" />
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    app:indicatorColor="#fa0202"
+                    app:indicatorName="BallPulseIndicator" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>-->
+
+
+</RelativeLayout>

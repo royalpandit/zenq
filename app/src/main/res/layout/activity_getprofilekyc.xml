@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colororange">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_arrow_white_24dp" />
+
+        <Button
+            android:id="@+id/kycupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/colororange"
+            android:text="Kyc Update"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/colororange">
+
+                <ImageView
+                    android:id="@+id/imguser"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/logozenq" />
+
+                <TextView
+                    android:id="@+id/tvusernam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imguser"
+                    android:layout_centerInParent="true"
+                    android:text="Abhishek"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/userinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/opensans_extrabold"
+                android:text="User Info"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userinfo"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/tv_buisness_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="Buisness Name" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_buisness_name"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="Name" />
+
+                <TextView
+                    android:id="@+id/tv_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="Mobile" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_mobile"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="Email" />
+
+                <TextView
+                    android:id="@+id/tv_full_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_email"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="Address" />
+
+                <TextView
+                    android:id="@+id/tv_locality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_full_address"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="Locality" />
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_locality"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="City" />
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_city"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="State" />
+
+                <TextView
+                    android:id="@+id/tv_countary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_state"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="Countary"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_pincode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_countary"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="Pin Code" />
+
+
+                <TextView
+                    android:id="@+id/tv_landline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pincode"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="Ladline" />
+
+                <TextView
+                    android:id="@+id/tv_pancard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_landline"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="Pan Card" />
+
+                <TextView
+                    android:id="@+id/tv_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pancard"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="Password" />
+
+                <TextView
+                    android:id="@+id/tv_con_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_password"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:text="Confirm Password" />
+
+
+            </RelativeLayout>
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/avi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:indicatorColor="#fa0202"
+                app:indicatorName="BallPulseIndicator" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
