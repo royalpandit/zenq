@@ -23,16 +23,10 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.abhishek.zenq.Bean.LoginBean;
 import com.abhishek.zenq.Bean.StateBean;
-import com.abhishek.zenq.MainActivity;
-import com.abhishek.zenq.Prefrence.AppPreferences;
 import com.abhishek.zenq.R;
 import com.abhishek.zenq.Response.GetStateResponse;
-import com.abhishek.zenq.Response.LoginResponse;
-import com.abhishek.zenq.Response.RegisterResponse;
 import com.abhishek.zenq.Utility.CommonUtils;
-import com.abhishek.zenq.adapter.AdapterAdminState;
 import com.abhishek.zenq.rest.ApiClient;
 import com.abhishek.zenq.rest.ApiInterface;
 import com.karumi.dexter.Dexter;
@@ -60,7 +54,6 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.http.Part;
 
 public class RegisterActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener , View.OnClickListener {
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";

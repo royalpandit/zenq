@@ -12,7 +12,12 @@
     <color name="light_gray">#eeeeee</color>
     <color name="underline_gray">#ECD0D0</color>
     <color name="buttoncolor">#fd7d00</color>
+    <color name="colorOrangeText">#FA9B06</color>
+    <color name="colorWhiteLight">#A4A3A1</color>
+    <color name="buttoncolor1">#F88304</color>
     <color name="black">#2a2a2a</color>
+    <color name="blackreg">#11141D</color>
+    <color name="black_metarial">#252525</color>
     <color name="bluedenim">#2D1C87</color>
     <color name="forgotpassword">#fe0012</color>
     <color name="blackemail">#1D1D1D</color>

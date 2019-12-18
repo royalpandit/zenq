@@ -27,8 +27,11 @@
         <activity android:name=".Location.FragmentGetCity"/>
         <activity android:name=".Adminfragment.ActivityAddState"/>
          <activity android:name=".Adminfragment.ActivityGet_Profile_Show_KYC"/>
-        <activity android:name=".activity.RegisterActivity"/>
-        <activity android:name=".activity.LoginActivity" />
+         <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.RegisterNumb"/>
+        <activity android:name=".activity.RegisterNum_OTP"/>
+        <activity android:name=".activity.RegisterNumAppDetail"/>
+        <activity android:name=".activity.RegisterNumFinalDetail"/>
         <activity android:name="MainActivity" />
         <activity android:name=".activity.ActivitySplash">
             <intent-filter>

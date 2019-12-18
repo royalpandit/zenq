@@ -5,6 +5,12 @@
     <string name="hint_forgot">Forgot Password</string>
     <string name="login_btn">Secure Login</string>
     <string name="hint_sign_up">Sign up Now!</string>
+    <string name="text_sign_up">Sign up </string>
+    <string name="sent_otp">we have sent you\n an OTP</string>
+    <string name="digit_proceed">enter the 4 digit otp to proceed</string>
+
+    <string name="giveeus">Give us your\n mobile number</string>
+    <string name="text_linkedacc">Mobile number linked with\n your account</string>
 
 
 </resources>

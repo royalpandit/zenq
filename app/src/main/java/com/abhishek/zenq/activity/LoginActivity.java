@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 finish();*/
             }
         }if (v==signup){
-            startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+            startActivity(new Intent(LoginActivity.this,RegisterNumb.class));
             finish();
 
         }
