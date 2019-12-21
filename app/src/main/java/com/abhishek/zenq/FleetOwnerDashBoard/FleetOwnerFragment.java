@@ -30,8 +30,7 @@ public class FleetOwnerFragment extends Fragment implements View.OnClickListener
     public void find() {
         linfleetquat=rootView.findViewById(R.id.linfleetquat);
         linfleetquat.setOnClickListener(this);
-      //  linadowner = rootView.findViewById(R.id.linadmin);
-       // linadowner.setOnClickListener(this);
+
     }
 
 
