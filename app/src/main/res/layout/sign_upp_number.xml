@@ -19,9 +19,9 @@
 
             <TextView
                 android:id="@+id/signup"
-                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/opensans_regular"
                 android:text="@string/text_sign_up"
                 android:textColor="@color/buttoncolor1"
@@ -74,9 +74,8 @@
             android:layout_marginTop="45dp"
             app:cardBackgroundColor="@color/black_metarial"
             card_view:cardCornerRadius="25dp"
-            card_view:contentPadding="10dp"
-            card_view:cardElevation="8dp">
-
+            card_view:cardElevation="8dp"
+            card_view:contentPadding="10dp">
 
 
             <Button
@@ -93,6 +92,16 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/large_text_size" />
 
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                app:indicatorColor="#fa0202"
+                app:indicatorName="BallPulseIndicator" />
 
         </androidx.cardview.widget.CardView>
 

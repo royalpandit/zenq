@@ -1,14 +1,16 @@
 package com.abhishek.zenq.rest;
 
 
+import com.abhishek.zenq.Bean.AllBidBean;
 import com.abhishek.zenq.Response.AddCityResponse;
 import com.abhishek.zenq.Response.AddStateResponse;
+import com.abhishek.zenq.Response.FleetOwnerAllBidResponse;
 import com.abhishek.zenq.Response.GetCityResponse;
 import com.abhishek.zenq.Response.GetStateResponse;
 import com.abhishek.zenq.Response.GetUSERKYCResponse;
 import com.abhishek.zenq.Response.KYCSubmitResponse;
 import com.abhishek.zenq.Response.LoginResponse;
-import com.abhishek.zenq.Response.RegisterResponse;
+import com.abhishek.zenq.Response.OtpResponse;
 
 
 import okhttp3.MultipartBody;
@@ -29,6 +31,11 @@ public interface ApiInterface {
     // @POST("userlogin.php?")
     @POST("fleet_userlogin.php?")
     Call<LoginResponse> Login(@Body RequestBody requestBody);
+
+
+
+    @POST("fleet_sendsms.php")
+    Call<OtpResponse> sendsms(@Body RequestBody requestBody);
     @POST("fleet_getuser.php")
     Call<GetUSERKYCResponse> GetUserKYC(@Body RequestBody requestBody);
     @POST("fleet_userkyc.php?")
@@ -42,12 +49,10 @@ public interface ApiInterface {
     Call<GetCityResponse> FleetGetCity(@Body RequestBody requestBody);
     @POST("fleet_addcity.php")
     Call<AddCityResponse> FleetAddCity(@Body RequestBody requestBody);
-/*    @POST("fleet_usersignup.php")
-    Call<RegisterResponse> Register(@Body RequestBody requestBody);*/
+
     @Multipart
     @POST("fleet_usersignup.php")
-    Call<ResponseBody> Register(@Part("image") RequestBody image, @Part("image2") RequestBody image2,
-                                @Part("user_type") RequestBody user_type, @Part("business_name") RequestBody business_name,
+    Call<ResponseBody> Register(@Part("user_type") RequestBody user_type, @Part("business_name") RequestBody business_name,
                                 @Part("name") RequestBody name, @Part("mobile") RequestBody mobile,
                                 @Part("email") RequestBody email, @Part("address") RequestBody address,
                                 @Part("locatlity") RequestBody locatlity, @Part("city") RequestBody city,
@@ -55,27 +60,12 @@ public interface ApiInterface {
                                 @Part("pincode") RequestBody pincode,
                                 @Part("landline") RequestBody landline, @Part("pancard") RequestBody pancard,
                                 @Part("password") RequestBody password, @Part("role") RequestBody role,
-                                @Part MultipartBody.Part file);
+                                @Part MultipartBody.Part file,@Part MultipartBody.Part file2);
 
-    /*
 
-    @POST("token.php?")
-    Call<ResponseBody> Token(@Body RequestBody requestBody);
+    @POST("fleet_getallbid.php")
+    Call<FleetOwnerAllBidResponse> FleetGetAllBid(@Body RequestBody requestBody);
 
-    @POST("order_details.php?")
-    Call<Modal_Order_Response> OrderDetails(@Body RequestBody requestBody);
-
-    @POST("verify_otp")
-    Call<ResponseBody> Verify_otp(@Body RequestBody requestBody);
-
-    @POST("forget")
-    Call<ResponseBody> Forget_Pass(@Body RequestBody requestBody);
-
-    @POST("order_complete.php")
-    Call<AcceptResponse> OrderComplete(@Body RequestBody requestBody);
-*/
-    @POST("restaurant_addfav.php?")
-    Call<ResponseBody> RestaurantADD_Fav(@Body RequestBody requestBody);
 
     @POST("restaurant_addcart.php?")
     Call<ResponseBody> Restaurant_add_Cart(@Body RequestBody requestBody);

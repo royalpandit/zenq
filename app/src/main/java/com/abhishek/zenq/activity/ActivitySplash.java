@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+import com.abhishek.zenq.FleetOwnerDashBoard.MainActivityOwnerDashboard;
 import com.abhishek.zenq.MainActivity;
 import com.abhishek.zenq.Prefrence.AppPreferences;
 import com.abhishek.zenq.R;
@@ -35,9 +36,19 @@ public class ActivitySplash extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 } else {
-                    Intent intent = new Intent(ActivitySplash.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
+
+                    String usertpe=  AppPreferences.getSavedUser(ActivitySplash.this).getUser_type();
+                    if (usertpe.equals("0")){
+                        Intent intent = new Intent(ActivitySplash.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+
+                    }else if (usertpe.equals("1")){
+                        Intent intent = new Intent(ActivitySplash.this, MainActivityOwnerDashboard.class);
+                        startActivity(intent);
+                        finish();
+
+                    }
 
                 }
                 //the current activity will get finished.

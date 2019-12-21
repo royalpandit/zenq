@@ -5,43 +5,40 @@
     android:layout_height="match_parent"
     android:background="@color/black">
 
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <RelativeLayout
-
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3">
 
-            <ImageView
-                android:id="@+id/graphimg"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/bg_graph" />
-
-            <RelativeLayout
-                android:id="@+id/rowfirst"
+            <LinearLayout
+                android:id="@+id/rowdfirst"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/graphimg"
-                android:gravity="center">
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
                 <RelativeLayout
-                    android:id="@+id/linadmin"
-                    android:layout_width="130dp"
-                    android:layout_height="100dp"
+                    android:id="@+id/linadowner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
+                    android:layout_weight="1"
                     android:background="@drawable/icon_bg"
                     android:gravity="center_vertical">
 
 
                     <ImageView
 
-                        android:id="@+id/adminaimage"
+                        android:id="@+id/img_fleet_adminin"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_centerHorizontal="true"
@@ -50,7 +47,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/adminaimage"
+                        android:layout_below="@+id/img_fleet_adminin"
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/opensans_regular"
                         android:text="Administration"
@@ -60,11 +57,12 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/linfleet"
-                    android:layout_width="130dp"
-                    android:layout_height="100dp"
+                    android:id="@+id/linfleetquat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:layout_toRightOf="@+id/linadmin"
+                    android:layout_toRightOf="@+id/linadowner"
+                    android:layout_weight="1"
                     android:background="@drawable/icon_bg"
                     android:gravity="center_vertical">
 
@@ -82,189 +80,158 @@
                         android:layout_below="@+id/fleet"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/opensans_regular"
-                        android:text="Fleet Owner"
+                        android:text="@string/quation"
                         android:textColor="@color/white" />
 
 
                 </RelativeLayout>
-            </RelativeLayout>
+            </LinearLayout>
 
-            <RelativeLayout
-                android:id="@+id/rowsecond"
+            <LinearLayout
+                android:id="@+id/rowdsec"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rowfirst"
-                android:gravity="center">
+                android:layout_below="@+id/rowdfirst"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
                 <RelativeLayout
-                    android:id="@+id/linbooking"
-                    android:layout_width="130dp"
-                    android:layout_height="100dp"
+                    android:id="@+id/linadtrips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
+                    android:layout_weight="1"
                     android:background="@drawable/icon_bg"
                     android:gravity="center_vertical">
 
 
                     <ImageView
 
-                        android:id="@+id/bookingimage"
+                        android:id="@+id/img_fleet_trip"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/booking" />
+                        android:src="@drawable/admin" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/bookingimage"
+                        android:layout_below="@+id/img_fleet_trip"
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/opensans_regular"
-                        android:text="Booking Agent"
+                        android:text="@string/trips"
                         android:textColor="@color/white" />
 
 
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/lincomiison"
-                    android:layout_width="130dp"
-                    android:layout_height="100dp"
+                    android:id="@+id/linfleetpayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:layout_toRightOf="@+id/linbooking"
+                    android:layout_toRightOf="@+id/linadtrips"
+                    android:layout_weight="1"
                     android:background="@drawable/icon_bg"
                     android:gravity="center_vertical">
 
 
                     <ImageView
-                        android:id="@+id/commision"
+                        android:id="@+id/img_fleet_pay"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/commision" />
+                        android:src="@drawable/fleet" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/commision"
+                        android:layout_below="@+id/img_fleet_pay"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/opensans_regular"
-                        android:text="Commisiion Agent"
+                        android:text="@string/paymnet"
                         android:textColor="@color/white" />
 
 
                 </RelativeLayout>
-            </RelativeLayout>
+            </LinearLayout>
 
-            <RelativeLayout
-                android:id="@+id/rowthird"
+            <LinearLayout
+                android:id="@+id/rowdthird"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rowsecond"
-                android:gravity="center">
+                android:layout_below="@+id/rowdsec"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
                 <RelativeLayout
-                    android:id="@+id/linbranch"
-
-                    android:layout_width="300dp"
-                    android:layout_height="100dp"
+                    android:id="@+id/linadcom_trips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
+                    android:layout_weight="1"
                     android:background="@drawable/icon_bg"
                     android:gravity="center_vertical">
 
 
                     <ImageView
 
-                        android:id="@+id/branchimage"
+                        android:id="@+id/img_fleetcomp_trip"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/branch" />
+                        android:src="@drawable/admin" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/branchimage"
+                        android:layout_below="@+id/img_fleetcomp_trip"
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/opensans_regular"
-                        android:text="Branch Office"
-                        android:textColor="@color/white" />
-
-
-                </RelativeLayout>
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/rowfourth"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/rowthird"
-                android:gravity="center">
-
-                <RelativeLayout
-                    android:id="@+id/lindriver"
-                    android:layout_width="130dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="15dp"
-                    android:background="@drawable/icon_bg"
-                    android:gravity="center_vertical">
-
-
-                    <ImageView
-
-                        android:id="@+id/driverimage"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_centerHorizontal="true"
-                        android:src="@drawable/driver" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/driverimage"
-                        android:layout_centerInParent="true"
-                        android:fontFamily="@font/opensans_regular"
-                        android:text="Driver"
+                        android:text="@string/com_trip"
                         android:textColor="@color/white" />
 
 
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/linfuel"
-                    android:layout_width="130dp"
-                    android:layout_height="100dp"
+                    android:id="@+id/linfleettracking"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:layout_toRightOf="@+id/lindriver"
+                    android:layout_toRightOf="@+id/linadcom_trips"
+                    android:layout_weight="1"
                     android:background="@drawable/icon_bg"
                     android:gravity="center_vertical">
 
 
                     <ImageView
-                        android:id="@+id/imgfuel"
+                        android:id="@+id/img_fleet_track"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/truks" />
+                        android:src="@drawable/fleet" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/imgfuel"
+                        android:layout_below="@+id/img_fleet_track"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/opensans_regular"
-                        android:text="Fuel Pump"
+                        android:text="@string/tracking"
                         android:textColor="@color/white" />
 
 
                 </RelativeLayout>
-            </RelativeLayout>
+            </LinearLayout>
 
-        </RelativeLayout>
-
-
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
-
 </RelativeLayout>
+
+

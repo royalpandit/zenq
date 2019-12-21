@@ -21,7 +21,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/left_drawer_layout"
+          android:id="@+id/left_drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="left"
@@ -35,5 +35,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
+
+ <!--   <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/left_drawerowner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_marginRight="-65dp"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/menu_layoutowner_item"
+            layout="@layout/drawer_fleet_owner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>-->
 
 </androidx.drawerlayout.widget.DrawerLayout>

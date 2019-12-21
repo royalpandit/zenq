@@ -245,8 +245,8 @@ String Str_countary="INDIA";
                         "email","address","locatlity","city","state","country","pincode","landline","pancard","password","role"},
                 new String[]{Str_editfirstname, Str_editfirstname, Str_editfirstname});*/
         if (CommonUtils.isNetworkAvailable(getApplicationContext())) {
-            Call<ResponseBody> call = apiInterface.Register(image,image2,user_type,business_name,name,
-                    mobile,email,address,locatlity,city,state,country,pincode,landline,pancard,password,role,part);
+            Call<ResponseBody> call = apiInterface.Register( user_type,business_name,name,
+                    mobile,email,address,locatlity,city,state,country,pincode,landline,pancard,password,role,part,part);
             call.enqueue(new Callback<ResponseBody>() {
                 @Override
                 public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

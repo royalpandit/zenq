@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.abhishek.zenq">
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -30,8 +32,11 @@
          <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.RegisterNumb"/>
         <activity android:name=".activity.RegisterNum_OTP"/>
-        <activity android:name=".activity.RegisterNumAppDetail"/>
+<activity android:name=".activity.RegisterNumAppDetail"/>
         <activity android:name=".activity.RegisterNumFinalDetail"/>
+        <activity android:name=".FleetOwnerDashBoard.MainActivityOwnerDashboard"/>
+
+
         <activity android:name="MainActivity" />
         <activity android:name=".activity.ActivitySplash">
             <intent-filter>
@@ -40,7 +45,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <receiver android:name=".Recived.IncomingSms">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

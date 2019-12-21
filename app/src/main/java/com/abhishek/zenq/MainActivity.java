@@ -13,6 +13,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -20,14 +21,20 @@ import com.abhishek.zenq.Adminfragment.FragmentAdminGetUser;
 import com.abhishek.zenq.Adminfragment.FragmentDashBoard;
 import com.abhishek.zenq.Location.FragmentGetState;
 import com.abhishek.zenq.Prefrence.AppPreferences;
+import com.abhishek.zenq.activity.ActivitySplash;
 import com.abhishek.zenq.activity.LoginActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView tv_home,tv_state, tvDriver, tvTruck, tvUserFeedback, tvLogout,tvHelp;
+    ImageView imgfleet_owner;
+    TextView fleet_tv_username,fleet_tv_useremail,fleet_tv_dfleet_logout,fleet_tv_dfleettruck,fleet_tv_dfleetdriver,
+            fleet_tv_dfleetbooking,fleet_tv_dfleetProfile,fleet_tv_dfleetMainten,fleet_tv_dfleetContact,fleet_tv_dfleetterms;
+
+String USERTYPE;
     Animation uptodown,downtoup;
     DrawerLayout drawerLayout;
-    LinearLayout left_drawer_left;
+    LinearLayout left_drawer_left,left_drawerowner_layout;
     Toolbar toolbar;
     Fragment fragment = null;
 
@@ -36,35 +43,47 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        USERTYPE = AppPreferences.getSavedUser(MainActivity.this).getUser_type();
 
+
+        find();
+        // getLocation();
+        //open drawer on navigation button click
+
+    }
+
+    public void find(){
         left_drawer_left = findViewById(R.id.left_drawer_layout);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         toolbar = findViewById(R.id.toolbar);
         tv_state = findViewById(R.id.tv_state);
-
         tv_home = (TextView)findViewById(R.id.tv_home);
         tvDriver = findViewById(R.id.tvDriver);
         tvHelp = findViewById(R.id.tvHelp);
-
         tvTruck = findViewById(R.id.tvTruck);
-
         tvUserFeedback = findViewById(R.id.tvUserFeedback);
         tvLogout = findViewById(R.id.tvLogout);
+
+        ///fleetOwner
+
+
+
+
+
+
+        loadFragment(new FragmentDashBoard());
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu_white);
-
-        // getLocation();
-        //open drawer on navigation button click
-        loadFragment(new FragmentDashBoard());
-
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                drawerLayout.openDrawer(GravityCompat.START);
+                left_drawer_left.setVisibility(View.VISIBLE);
+                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
         tv_home.setOnClickListener(this);
@@ -74,7 +93,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvUserFeedback.setOnClickListener(this);
         tvHelp.setOnClickListener(this);
         tvLogout.setOnClickListener(this);
+
     }
+
+
+
     private boolean loadFragment(Fragment fragment) {
         //switching fragment
         if (fragment != null) {

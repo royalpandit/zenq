@@ -6,6 +6,7 @@
     <dimen name="card_album_radius">5dp</dimen>
     <dimen name="small_text_size">5pt</dimen>
     <dimen name="medium_text_size">7pt</dimen>
+    <dimen name="mediumd_text_size">8pt</dimen>
 <dimen name="medim_large_text">10pt</dimen>
     <dimen name="large_text_size">12pt</dimen>
 

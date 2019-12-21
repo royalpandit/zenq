@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/topl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+               android:src="@drawable/side_profile" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_image"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_horizontal"
+            android:text="Abhishek"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size" />
+
+        <TextView
+            android:id="@+id/tv_useremail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_username"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_horizontal"
+            android:text="xyz@gmail.com"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="100dp"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dfleet_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tollbar"
+                android:drawableLeft="@drawable/ic_logout"
+                android:drawablePadding="@dimen/medium_text_size"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/logout"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mediumd_text_size" />
+
+
+            <TextView
+                android:id="@+id/tv_dfleettruck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_truck"
+                android:drawablePadding="@dimen/medium_text_size"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/trucks"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mediumd_text_size" />
+
+            <TextView
+                android:id="@+id/tv_dfleetdriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_truck"
+                android:drawablePadding="@dimen/medium_text_size"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/driver"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mediumd_text_size" />
+
+            <TextView
+                android:id="@+id/tv_dfleetbooking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_booking"
+                android:drawablePadding="@dimen/medium_text_size"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/boking"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mediumd_text_size" />
+
+            <TextView
+                android:id="@+id/tv_dfleetProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_profile_male"
+                android:drawablePadding="@dimen/medium_text_size"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/profile"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mediumd_text_size" />
+
+            <TextView
+                android:id="@+id/tv_dfleetMainten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_maintenance"
+                android:drawablePadding="@dimen/medium_text_size"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/maintentence"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mediumd_text_size" />
+
+            <TextView
+                android:id="@+id/tv_dfleetContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_contactus"
+                android:drawablePadding="@dimen/medium_text_size"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/contact"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mediumd_text_size" />
+
+            <TextView
+                android:id="@+id/tv_dfleetterms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_condition"
+                android:drawablePadding="@dimen/medium_text_size"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/terms"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mediumd_text_size" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

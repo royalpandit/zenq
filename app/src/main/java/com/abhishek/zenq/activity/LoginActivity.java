@@ -17,6 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.abhishek.zenq.Bean.LoginBean;
+import com.abhishek.zenq.FleetOwnerDashBoard.MainActivityOwnerDashboard;
 import com.abhishek.zenq.MainActivity;
 import com.abhishek.zenq.Prefrence.AppPreferences;
 import com.abhishek.zenq.R;
@@ -127,12 +128,28 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     Log.d("2222", "2222");
                     try {
                         if (response.isSuccessful() && response.body().getStatus().equals("1") && response.body().getMsg().equalsIgnoreCase("Successfully")) {
-                            if (response.body().getInfo().getUser_type().equals("0") && response.body().getInfo().getIs_kyc().equals("1")) {
+                            if (response.body().getInfo().getUser_type().equals("0") ) {
+
                                 LoginBean loginBean = response.body().getInfo();
                                 AppPreferences.SaveUserdetail(LoginActivity.this, loginBean);
                                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                finish();
 
-                            } else {
+                            }else if (response.body().getInfo().getUser_type().equals("1") ){
+                                if (response.body().getInfo().getIs_active().equals("1") ){
+                                    LoginBean loginBean = response.body().getInfo();
+                                    AppPreferences.SaveUserdetail(LoginActivity.this, loginBean);
+                                    Intent i=new Intent(LoginActivity.this, MainActivityOwnerDashboard.class);
+
+                                    startActivity(i);
+                                    finish();
+
+                                 }else
+                                    Toast.makeText(LoginActivity.this, response.body().getMsg(), Toast.LENGTH_SHORT).show();
+
+                            }
+
+                                else {
                                 Toast.makeText(LoginActivity.this, response.body().getMsg(), Toast.LENGTH_SHORT).show();
                             }
 

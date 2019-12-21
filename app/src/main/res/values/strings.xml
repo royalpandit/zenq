@@ -11,6 +11,28 @@
 
     <string name="giveeus">Give us your\n mobile number</string>
     <string name="text_linkedacc">Mobile number linked with\n your account</string>
+    
+    <string name="photo">Please upload your Photo or \n id Proof here...</string>
+    
+    
+<!--    //fleet drawer//-->
+    
+    <string name="logout">Logout</string>
+    <string name="trucks">My Trucks</string>
+    <string name="driver">My Drivers</string>
+    <string name="boking">My Booking</string>
+    <string name="profile">My Profile</string>
+    <string name="maintentence">Maintenance</string>
+    <string name="contact">Contact</string>
+    <string name="terms">Terms &amp; condition</string>
+
+<!--    fleet_dashoborad-->
+
+    <string name="quation">Quotations</string>
+    <string name="trips">My Trips</string>
+    <string name="paymnet">My Paymnet</string>
+    <string name="com_trip">Complete trip</string>
+    <string name="tracking">Tracking</string>
 
 
 </resources>

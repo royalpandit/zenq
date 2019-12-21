@@ -23,7 +23,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:weightSum="3">
-
+<TextView
+    android:layout_marginLeft="20dp"
+android:textColor="@color/white"
+    android:text="@string/photo"
+    android:textSize="@dimen/medium_text_size"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_viewuser"
                 android:layout_width="match_parent"
@@ -50,22 +56,33 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:text="Photo"
-                        android:textColor="@color/buttoncolor"
+                        android:text="Click On Upload your Photo"
+                        android:textColor="@color/light_gray"
                         android:textSize="@dimen/medium_text_size" />
 
 
                     <ImageView
                         android:id="@+id/userimage"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
                         android:scaleType="fitXY"
-                        android:src="@drawable/logoo" />
+                        android:src="@drawable/ic_download" />
 
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:indicatorColor="#fa0202"
+                app:indicatorName="BallPulseIndicator" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_viewid"
@@ -92,17 +109,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:text="ID Proof"
-                        android:textColor="@color/buttoncolor"
+                        android:text="Click on upload your i'd proof"
+                        android:textColor="@color/light_gray"
                         android:textSize="@dimen/medium_text_size" />
 
                     <ImageView
                         android:id="@+id/idimage"
-                        android:layout_width="match_parent"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
 
-                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:scaleType="fitXY"
-                        android:src="@drawable/logoo" />
+                        android:src="@drawable/ic_download" />
 
 
                 </LinearLayout>
@@ -113,13 +131,15 @@
                 android:id="@+id/btn_next"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"
-
+                android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
                 android:background="@drawable/buttonborder"
+
                 android:fontFamily="@font/opensans_regular"
+                android:gravity="center"
                 android:text="Submit"
                 android:textColor="@color/white"
                 android:textSize="@dimen/large_text_size" />

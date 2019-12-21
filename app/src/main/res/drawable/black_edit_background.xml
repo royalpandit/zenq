@@ -6,6 +6,6 @@
         android:height="60dp" />
     <solid android:color="@color/black_metarial"/>
 
-    <stroke android:color="@color/buttoncolor"
+    <stroke android:color="@color/black_metarial"
         android:width="0.5dp"/>
 </shape>
