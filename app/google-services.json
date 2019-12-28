@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "155845690248",
+    "firebase_url": "https://zeiqindia-95481.firebaseio.com",
+    "project_id": "zeiqindia-95481",
+    "storage_bucket": "zeiqindia-95481.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155845690248:android:1330147425250c4abef03d",
+        "android_client_info": {
+          "package_name": "com.abhishek.zeiqindia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155845690248-5n82819pb5dq9hv1efgc3juj66l4d36q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.abhishek.zeiqindia",
+            "certificate_hash": "a84c1aed753e06f9c2d6906c407bd41804046cf7"
+          }
+        },
+        {
+          "client_id": "155845690248-ov7282bbr5ia9o28rsdjs6qj1rka93ha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF_zNCOHsBIkH6hGTd7FIoVt21hE4xePo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155845690248-ov7282bbr5ia9o28rsdjs6qj1rka93ha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

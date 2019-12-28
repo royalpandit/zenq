@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/buttoncolor1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/opensans_light"
+            android:text="Please enter All fields"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/logo">
+
+        <RelativeLayout
+            android:id="@+id/reli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                app:cardBackgroundColor="@color/black_metarial"
+                card_view:cardCornerRadius="@dimen/card_album_radius"
+                card_view:contentPadding="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/midlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/edit_company_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/editcategory_spin"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:enabled="true"
+                        android:hint="@string/companny"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <EditText
+                        android:id="@+id/edit_company_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_company_name"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:enabled="true"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <EditText
+                        android:id="@+id/edit_company_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_company_email"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="@string/con_person"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:enabled="true"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <EditText
+                        android:id="@+id/edit_company_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_company_person"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="@string/con_num"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:enabled="true"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <EditText
+                        android:id="@+id/edit_company_gst"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_company_number"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="@string/gst"
+                        android:inputType="text"
+                        android:padding="5dp"
+                        android:enabled="true"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <EditText
+                        android:id="@+id/edit_company_pan"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_company_gst"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="@string/pan"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:enabled="true"
+                        android:textSize="@dimen/medium_text_size" />
+                    <EditText
+                        android:id="@+id/edit_company_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_company_pan"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="@string/companny_add"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:enabled="true"
+                        android:textSize="@dimen/medium_text_size" />
+
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:id="@+id/bar"
+                        style="@style/AVLoadingIndicatorView.Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_centerInParent="true"
+                        app:indicatorColor="@color/buttoncolor1"
+                        app:indicatorName="BallGridPulseIndicator" />
+
+
+                    <Button
+                        android:id="@+id/btn_add_party"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_company_address"
+
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/buttonborder"
+                        android:fontFamily="@font/opensans_regular"
+
+                        android:text="ok"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_text_size" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</LinearLayout>

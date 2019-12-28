@@ -21,8 +21,21 @@
     </LinearLayout>
 
 
-
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
     <LinearLayout
+        android:id="@+id/left_drawerowner_layout"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/nav_header_main" />
+
+   <!-- <LinearLayout
          android:id="@+id/left_drawerowner_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,12 +43,12 @@
         android:layout_marginRight="-65dp"
         android:background="@android:color/transparent"
         android:orientation="vertical">
-
+-->
         <include
             android:id="@+id/menu_layoutowner_item"
             layout="@layout/drawer_fleet_owner"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
-
+    </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

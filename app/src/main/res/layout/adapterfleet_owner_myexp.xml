@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/addexp_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="@dimen/card_album_radius"
+        card_view:cardElevation="8dp"
+        card_view:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+<TextView
+    android:text="date"
+    android:id="@+id/dates"
+    android:layout_gravity="right"
+     android:textColor="@color/buttoncolor1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_toexp_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Expenses Type /Price "
+
+                    android:textColor="@color/buttoncolor1"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_toexp_type_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text=" "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text_size" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:visibility="gone"
+                android:id="@+id/linother"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_toexp_other"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="other "
+
+                    android:textColor="@color/buttoncolor1"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_toexp_type_other"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text=" "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text_size" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+
+                android:id="@+id/linmake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_tod_qty"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Qunatity"
+                        android:textColor="@color/buttoncolor1"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_d_quantity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="1250LTR"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/medium_text_size" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_tod_rate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Rate"
+
+                        android:textColor="@color/buttoncolor1"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_d_Rate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="1502 INR"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/medium_text_size" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_tod_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Amount"
+
+                        android:textColor="@color/buttoncolor1"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_d_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="15020 INR"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/medium_text_size" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_tod_km"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Vehicle KM"
+
+                        android:textColor="@color/buttoncolor1"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_d_KM"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="150 KM"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/medium_text_size" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_totyre_make"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Tyre Make"
+                        android:textColor="@color/buttoncolor1"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_tyreMake"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="2015"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/medium_text_size" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

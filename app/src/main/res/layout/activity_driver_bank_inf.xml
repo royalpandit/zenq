@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/editdriver_aadhar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/drive_aadhar"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+        <EditText
+            android:id="@+id/editdriver_pancard"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/drive_pan_card"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+
+        <EditText
+            android:id="@+id/editdriver_bak_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/driver_bankde"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+
+        <EditText
+            android:id="@+id/editdriver_bak_accc_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/driver_account"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+        <EditText
+            android:id="@+id/editdriver_bak_ifsc_code"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/ifsc_code"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+        <Button
+            android:id="@+id/next_driver_fill"
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/forgor"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/buttonborder"
+            android:fontFamily="@font/opensans_regular"
+            android:text="@string/continu"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="7pt" />
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

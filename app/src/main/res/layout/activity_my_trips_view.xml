@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/topla"
+        android:gravity="center_vertical"
+        android:background="@color/buttoncolor1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:layout_centerVertical="true"
+
+            android:id="@+id/back"
+            android:src="@drawable/ic_left_black_24dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"/>
+        <TextView
+            android:text="@string/trips_view"
+            android:layout_toRightOf="@+id/back"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:fontFamily="@font/raleway_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_exp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_toLeftOf="@+id/btn_load"
+             android:background="@color/light_gray"
+            android:text="@string/exp"
+android:layout_marginRight="5dp"
+            android:padding="2dp"
+            android:textAllCaps="false"
+            android:textColor="@color/buttoncolor1"
+            android:textSize="@dimen/medium_text_size" />
+
+
+        <Button
+            android:id="@+id/btn_load"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+             android:padding="2dp"
+            android:text="@string/load"
+            android:textAllCaps="false"
+            android:textColor="@color/buttoncolor1"
+            android:textSize="@dimen/medium_text_size" />
+
+
+    </RelativeLayout>
+
+<ScrollView
+    android:layout_below="@+id/topla"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/addcard_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="@dimen/card_album_radius"
+        card_view:cardElevation="8dp"
+        card_view:contentPadding="19dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/toppalace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/tv_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delhi"
+                    android:textColor="@color/buttoncolor1"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_to_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_to"
+                    android:text="Delhi,Gurgaon"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+
+                <TextView
+                    android:id="@+id/tv_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Jaipur"
+                    android:textColor="@color/buttoncolor1"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_from_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_from"
+                    android:layout_alignParentRight="true"
+                    android:text="Jaipur,Rajsthan"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/medium_text_size" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_box" />
+
+
+                    <TextView
+                        android:id="@+id/tv_goods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="Bevarges"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/medium_text_size" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_calculator" />
+
+                    <TextView
+                        android:id="@+id/tv_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="200 Ton"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/medium_text_size" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_access" />
+
+                    <TextView
+                        android:id="@+id/tv_expire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="expires"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/medium_text_size" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/tollbar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_weight_body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="16.0t Full Body"
+                    android:textColor="@color/black_metarial"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_bidd_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1000"
+                    android:textColor="@color/buttoncolor1"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_bidd_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1000"
+                    android:textColor="@color/black_metarial"
+                    android:textSize="@dimen/medium_text_size" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/edit_advance"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+android:layout_gravity="center_vertical"                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shape_edit_bg"
+                    android:fontFamily="@font/opensans_regular"
+                    android:hint="Advance Amount"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                     android:textSize="@dimen/medium_text_size" />
+
+                <TextView
+                    android:id="@+id/edit_shortage"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/edit_advance"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shape_edit_bg"
+                    android:fontFamily="@font/opensans_regular"
+                    android:hint="Shortage"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:textSize="@dimen/medium_text_size" />
+
+
+
+                <TextView
+                    android:id="@+id/edit_deduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shape_edit_bg"
+                    android:fontFamily="@font/opensans_regular"
+                    android:hint="Deduction"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <TextView
+                    android:id="@+id/edit_munsiyana"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/edit_advance"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shape_edit_bg"
+                    android:fontFamily="@font/opensans_regular"
+                    android:hint="Munsiyana"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:textSize="@dimen/medium_text_size" />
+
+
+                <TextView
+                    android:id="@+id/edit_commision"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shape_edit_bg"
+                    android:fontFamily="@font/opensans_regular"
+                    android:hint="Commision"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <TextView
+                    android:id="@+id/edit_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/edit_advance"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shape_edit_bg"
+                    android:fontFamily="@font/opensans_regular"
+                    android:hint="Other"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:textSize="@dimen/medium_text_size" />
+
+
+
+                <TextView
+                    android:id="@+id/edit_is_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shape_edit_bg"
+                    android:fontFamily="@font/opensans_regular"
+                    android:hint="Complete"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:textSize="@dimen/medium_text_size" />
+
+                <TextView
+                    android:id="@+id/edit_party"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/edit_advance"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shape_edit_bg"
+                    android:fontFamily="@font/opensans_regular"
+                    android:hint="Party Name"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:textSize="@dimen/medium_text_size" />
+                <!--
+                                                           "": "10",
+                                                          "": "1000",
+                                                          "": "100",
+                                                          "": "10",
+                                                          "": "no",
+                                                          "": "0",
+                                                          "from_state": "Rajasthan",
+                                                          "from_city": "jaipur",
+                                                          "to_state": "Rajasthan",
+                                                          "to_city": "Jodhpir",
+                                                          "": "m\/s party",
+                                                          "": "round",
+                                                          "driver_id": "",
+                                                          "truck_id": "",
+                                                          "is_bid": "0",
+                                                          "bid_status": "",
+                                                          "create_date": "2019-12-24 20:56:56"-->
+
+                <TextView
+                    android:id="@+id/edit_trip_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shape_edit_bg"
+                    android:fontFamily="@font/opensans_regular"
+                    android:hint="Trip Type"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:textSize="@dimen/medium_text_size" />
+
+
+
+
+            </LinearLayout>
+
+         <!--   <LinearLayout
+                android:layout_margin="10dp"                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_exp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/btn_bid"
+                    android:layout_weight="1"
+                    android:background="@color/buttoncolor1"
+                    android:text="@string/exp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text_size" />
+
+
+                <Button
+                    android:id="@+id/btn_load"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/btn_com_trip"
+                    android:layout_weight="1"
+                    android:background="@color/buttoncolor1"
+                    android:padding="5dp"
+                    android:text="@string/load"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text_size" />
+
+
+            </LinearLayout>-->
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</ScrollView>
+</RelativeLayout>

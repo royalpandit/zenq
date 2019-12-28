@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+         android:background="@color/colororange">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_centerVertical="true"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_arrow_white_24dp" />
+
+        <TextView
+            android:id="@+id/text_tv"
+            android:text="My Expenses"
+            android:layout_toRightOf="@+id/back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/header"
+        android:id="@+id/toppalace"
+        android:weightSum="3"
+        android:orientation="horizontal"
+         android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/borderclo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount"
+                android:gravity="center"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text_size" />
+            <TextView
+                android:id="@+id/tv_toamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=" "
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text_size" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:background="@drawable/borderclo"
+
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Expenses"
+                android:gravity="center"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text_size" />
+            <TextView
+                android:id="@+id/tv_to_exp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text_size" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:background="@drawable/borderclo"
+
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Remaining"
+                android:gravity="center"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text_size" />
+
+            <TextView
+                android:id="@+id/tv_remina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text_size" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/toppalace"
+        android:id="@+id/explistrecycle"
+         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp" />
+
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/buttoncolor1"
+        app:indicatorName="BallGridPulseIndicator"
+        style="@style/AVLoadingIndicatorView.Large"/>
+
+</RelativeLayout>

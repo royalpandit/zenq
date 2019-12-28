@@ -81,8 +81,9 @@ android:textColor="@color/white"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
                 android:visibility="gone"
-                app:indicatorColor="#fa0202"
-                app:indicatorName="BallPulseIndicator" />
+                app:indicatorColor="@color/buttoncolor1"
+                app:indicatorName="BallGridPulseIndicator"
+                style="@style/AVLoadingIndicatorView.Large" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_viewid"

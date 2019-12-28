@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/buttoncolor1">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_left_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/back"
+            android:fontFamily="@font/opensans_bold"
+            android:text="Truck Registration Field"
+            android:textColor="@color/white"
+            android:textSize="@dimen/mediumd_text_size" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editdriver_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/login_bg"
+             android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/drive_name"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+
+        <EditText
+            android:id="@+id/editdriver_lic_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/lic_num"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+
+        <TextView
+            android:id="@+id/editdriver_lic_valid"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/valid"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+
+        <EditText
+            android:id="@+id/editdriver_exp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/dri_exp"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+        <TextView
+            android:id="@+id/editdriver_dob"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/dob"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+        <EditText
+            android:id="@+id/editdriver_address"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/driv_add"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+        <EditText
+            android:id="@+id/editdriver_contact"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/driv_cont"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+        <EditText
+            android:id="@+id/editdriver_ins"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/Insura_y_no"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+        <EditText
+            android:id="@+id/editdriver_ins_details"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/ins_det"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+        <EditText
+            android:id="@+id/editdriver_eme_con_det"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/eme_con_deta"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+        <EditText
+            android:id="@+id/editdriver_blood"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/blood"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+
+        <TextView
+            android:id="@+id/editdriver_doj"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/doj"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+        <EditText
+            android:id="@+id/editdriver_yrs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editcategory_spin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/exp_yrs"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/buttoncolor"
+            android:textColorHint="@color/buttoncolor"
+            android:textSize="@dimen/medium_text_size" />
+
+
+
+
+
+        <Button
+            android:id="@+id/next_driver_fill"
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/forgor"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/buttonborder"
+            android:fontFamily="@font/opensans_regular"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="7pt" />
+
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <RelativeLayout
+        android:visibility="gone"
         android:id="@+id/topl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,7 +48,6 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginRight="100dp"
         android:background="@color/black">
 
         <LinearLayout
@@ -133,6 +133,19 @@
                 android:gravity="center_vertical"
                 android:padding="10dp"
                 android:text="@string/maintentence"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mediumd_text_size" />
+
+            <TextView
+                android:id="@+id/tv_dfleetparty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_maintenance"
+                android:drawablePadding="@dimen/medium_text_size"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/party"
                 android:textColor="@color/white"
                 android:textSize="@dimen/mediumd_text_size" />
 

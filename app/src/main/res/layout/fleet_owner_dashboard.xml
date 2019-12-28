@@ -6,6 +6,7 @@
     android:background="@color/black">
 
     <androidx.core.widget.NestedScrollView
+        android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -19,7 +20,7 @@
             <LinearLayout
                 android:id="@+id/rowdfirst"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:layout_below="@+id/graphimg"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -90,7 +91,7 @@
             <LinearLayout
                 android:id="@+id/rowdsec"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:layout_below="@+id/rowdfirst"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -161,7 +162,7 @@
             <LinearLayout
                 android:id="@+id/rowdthird"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:layout_below="@+id/rowdsec"
                 android:layout_weight="1"
                 android:gravity="center"

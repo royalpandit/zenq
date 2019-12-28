@@ -1,55 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.abhishek.zenq">
+    package="com.abhishek.zeiqindia">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-
-    <!--    https://codecanyon.net/item/logi-truck-react-native-theme/23565161
-        https://codecanyon.net/item/truck-tracking-driver-android-ios-app-template-html-css-ionic-3-trucksup/24083870-->
-
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-         android:theme="@style/AppTheme">
-        <activity android:name=".Adminfragment.ActivityAddCity"/>
-        <activity android:name=".Location.FragmentGetCity"/>
-        <activity android:name=".Adminfragment.ActivityAddState"/>
-         <activity android:name=".Adminfragment.ActivityGet_Profile_Show_KYC"/>
-         <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.RegisterNumb"/>
-        <activity android:name=".activity.RegisterNum_OTP"/>
-<activity android:name=".activity.RegisterNumAppDetail"/>
-        <activity android:name=".activity.RegisterNumFinalDetail"/>
-        <activity android:name=".FleetOwnerDashBoard.MainActivityOwnerDashboard"/>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
 
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
 
-        <activity android:name="MainActivity" />
-        <activity android:name=".activity.ActivitySplash">
+        <activity
+            android:name="com.abhishek.zeiqindia.FleetOwnerDashBoard.FleetOwnerMyTruckList"
+            android:label="@string/title_activity_fleet_owner_my_driver_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.abhishek.zeiqindia.Adminfragment.ActivityAddCity" />
+        <activity android:name="com.abhishek.zeiqindia.Location.FragmentGetCity" />
+        <activity android:name="com.abhishek.zeiqindia.Adminfragment.ActivityAddState" />
+        <activity android:name="com.abhishek.zeiqindia.Adminfragment.ActivityGet_Profile_Show_KYC" />
+        <activity android:name="com.abhishek.zeiqindia.activity.LoginActivity" />
+        <activity android:name="com.abhishek.zeiqindia.activity.RegisterNumb" />
+        <activity android:name="com.abhishek.zeiqindia.activity.RegisterNum_OTP" />
+        <activity android:name="com.abhishek.zeiqindia.activity.RegisterNumAppDetail" />
+        <activity android:name="com.abhishek.zeiqindia.activity.RegisterNumFinalDetail" />
+        <activity android:name="com.abhishek.zeiqindia.FleetOwnerDashBoard.MainActivityOwnerDashboard" />
+        <activity android:name="com.abhishek.zeiqindia.MainActivity" />
+        <activity android:name="com.abhishek.zeiqindia.Truck_DriverRegister.ActivityTruckPersonal_Details" />
+        <activity android:name="com.abhishek.zeiqindia.Truck_DriverRegister.ActivityDriverPersonal_Details" />
+        <activity android:name=".Truck_DriverRegister.ActivityFleetAddTrip"/>
+        <activity android:name=".Truck_DriverRegister.ActivityFleet_Add_MyParty"/>
+        <activity android:name=".Truck_DriverRegister.MyTripsView"/>
+        <activity android:name=".Truck_DriverRegister.ActivityFleetAddTripLoadlist"/>
+        <activity android:name=".Truck_DriverRegister.Activtiy_Fleet_AddLoad_Trip"/>
+        <activity android:name=".Truck_DriverRegister.Activity_FleetTripExpList"/>
+        <activity android:name="com.abhishek.zeiqindia.FleetOwnerDashBoard.FleetOwnerMyDriverList"/>
+        <activity android:name="com.abhishek.zeiqindia.activity.ActivitySplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".Recived.IncomingSms">
+
+        <receiver android:name="com.abhishek.zeiqindia.Recived.IncomingSms">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
+
+
+        <service android:name=".FCM.NotificationHandler">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
     </application>
 
 </manifest>

@@ -96,9 +96,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/opensans_regular"
-                        android:text="Bevarges"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/medium_text_size" />
+                        android:textSize="@dimen/medium_text_size"
+                        android:text="Bevarges"
+                        />
 
 
                 </LinearLayout>

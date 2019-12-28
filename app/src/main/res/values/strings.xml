@@ -1,6 +1,22 @@
 <resources>
-    <string name="app_name">zenq</string>
+    <string name="app_name">zeiq</string>
     <string name="hint_email">Enter Email or Phone</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="forgot_password_text">Please enter your email below and you will get instructions on your email for password recovery.</string>
+    <string name="email">Email</string>
+    <string name="advance">Amount</string>
+    <string name="advance_amount">Please Enter Trip Advance Amount </string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="compl_trip">Complete Trip</string>
+<string name="companny">Company Name</string>
+    <string name="companny_add">Company Address</string>
+    <string name="con_person">Contact Person</string>
+    <string name="con_num">Contact Number</string>
+    <string name="gst">Gst</string>
+    <string name="pan">pan</string>
+    <string name="add_succe">Party Added Succefull</string>
+
     <string name="hint_password">Password</string>
     <string name="hint_forgot">Forgot Password</string>
     <string name="login_btn">Secure Login</string>
@@ -8,31 +24,130 @@
     <string name="text_sign_up">Sign up </string>
     <string name="sent_otp">we have sent you\n an OTP</string>
     <string name="digit_proceed">enter the 4 digit otp to proceed</string>
+    <string name="invalid_email">Invalid Email !!</string>
+    <string name="blank_password">Please enter password.</string>
+    <string name="blank_email">Please Enter  Email</string>
+    <string name="min_char_password">Password should be 6 to 15 characters.</string>
+    <string name="invalid_password">Invalid Password !!</string>
+<string name="my_truck">My Truck</string>
+    <string name="my_driver">My Driver</string>
 
+    <string name="my_trips">My Trips</string>
+    <string name="my_party">My Party</string>
+    <string name="vendor_mainet">Vendor Mentienence</string>
     <string name="giveeus">Give us your\n mobile number</string>
     <string name="text_linkedacc">Mobile number linked with\n your account</string>
-    
+
     <string name="photo">Please upload your Photo or \n id Proof here...</string>
-    
-    
-<!--    //fleet drawer//-->
-    
+
+<!--Error-->
+    <string name="error_email">Please Enter Your Email</string>
+    <string name="error_company_name">Please Enter Your Company Name</string>
+    <string name="error_pan">Please Enter Your Pan Card</string>
+    <string name="error_gst">Please Enter Your GST Number</string>
+    <string name="error_mobile">Please Enter Your Conatct no.</string>
+    <string name="error_person">Please Enter Your Name</string>
+
+
+
+
+    <!--    //fleet drawer//-->
+
     <string name="logout">Logout</string>
     <string name="trucks">My Trucks</string>
     <string name="driver">My Drivers</string>
     <string name="boking">My Booking</string>
     <string name="profile">My Profile</string>
     <string name="maintentence">Maintenance</string>
+    <string name="party">My Party</string>
     <string name="contact">Contact</string>
     <string name="terms">Terms &amp; condition</string>
 
-<!--    fleet_dashoborad-->
+    <!--    fleet_dashoborad-->
 
     <string name="quation">Quotations</string>
     <string name="trips">My Trips</string>
-    <string name="paymnet">My Paymnet</string>
+    <string name="trips_view">My Trips View</string>
+    <string name="paymnet">My Payment</string>
     <string name="com_trip">Complete trip</string>
+    <string name="start_trip">Start Trip</string>
+    <string name="view">View</string>
+    <string name="exp">Add Expenses</string>
+    <string name="load">Add Load</string>
     <string name="tracking">Tracking</string>
+
+    <!--    Truck Field-->
+
+    <string name="reg_nu">Truck Reg. No.</string>
+    <string name="reg_date">Truck Registration Date</string>
+    <string name="reg_valid">Truck Registration Valid</string>
+    <string name="chasis">Truck Chasis No.</string>
+    <string name="engine">Truck Engine No.</string>
+    <string name="make">Make of trucck</string>
+    <string name="model">Truck Model</string>
+    <string name="capacity">Truck Load Capacity</string>
+    <string name="tax">Truck Road Tax</string>
+    <string name="insusrance">Truck Insurance Valid Upto</string>
+    <string name="permit">Truck Permit Valid Upto</string>
+    <string name="puc">Truck PUC Valid Upto</string>
+    <string name="fitness">Truck Fitness Valid Upto</string>
+    <string name="emi_date">Truck Emi Date(Not Complsury)</string>
+    <string name="fin_office">Truck Financier Office(Not Complsury)</string>
+    <string name="owner_name">Truck Owner Name</string>
+    <string name="owner_contact">Truck Owner Conatct No.</string>
+    <string name="owner_email">Truck Owner Email</string>
+    <string name="owner_aadhar">Truck Owner Aadhar No.</string>
+    <string name="owner_pan_card">Truck Owner Pan Card</string>
+    <string name="tds">Truck Owner TDS Document</string>
+    <string name="owner_bankde">Name Of Bank</string>
+    <string name="owner_bank_account">Account No.</string>
+    <string name="owner_ifsc_code">IFSC Code</string>
+    <string name="upload_rc_photo_front">Upload RC Photo Front</string>
+    <string name="upload_rc_photo_back">Upload RC Photo Back</string>
+
+
+    <!--    Driver Field -->
+    <string name="drive_name">Driver Name</string>
+    <string name="lic_num">License Number</string>
+    <string name="valid">License Vaild Upto</string>
+    <string name="dri_exp">Driving Experience</string>
+    <string name="dob">Date of Birth</string>
+    <string name="driv_add">Driver Address</string>
+    <string name="driv_cont">Driver Contact No.</string>
+    <string name="Insura_y_no">Insurance Yes/No</string>
+    <string name="ins_det">Insurance Details</string>
+    <string name="eme_con_deta">Emergency Contact Details</string>
+    <string name="blood">Blood Group</string>
+    <string name="doj">Date Of Joining</string>
+    <string name="exp_yrs">Experiance Yrs</string>
+    <string name="drive_aadhar">Driver Aadhar Card</string>
+    <string name="drive_pan_card">Driver Pan Card</string>
+    <string name="driver_bankde">Name Of Bank</string>
+    <string name="driver_account">Account No.</string>
+    <string name="ifsc_code">IFSC Code</string>
+    <string name="uplod_lic_photo">Upload Licance Photo Front</string>
+    <string name="upload_lic_photo_back">Upload Licance Photo Back</string>
+    <string name="upload_driver_photo">Upload Driver Photo</string>
+    <string name="continu">Continue</string>
+    <string name="next">Next</string>
+
+
+    <!--    ////////////////////////////Utils Fiels/////////////////////////-->
+
+    <string name="press_again_to_exit">Press \"Back\" again to exit !!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no">No</string>
+    <string name="logout_sure_text">Are you sure you want to logout ?</string>
+    <string name="yes">Yes</string>
+    <string name="title_activity_fleet_owner_my_driver_list">FleetOwnerMyDriverList</string>
+    <string name="title_activity_maps">Map</string>
 
 
 </resources>
+
+
+
+
+
+
+

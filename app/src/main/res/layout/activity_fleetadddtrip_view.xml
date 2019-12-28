@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/buttoncolor1">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_left_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/back"
+            android:fontFamily="@font/opensans_light"
+            android:text="Please enter All fields"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/logo">
+
+        <RelativeLayout
+            android:id="@+id/reli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                app:cardBackgroundColor="@color/black_metarial"
+                card_view:cardCornerRadius="@dimen/card_album_radius"
+                card_view:contentPadding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/midlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/edit_todate"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/editcategory_spin"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="todate"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/edit_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_todate"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="Weight"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/edit_price_per_ton"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_todate"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="Price Per Ton"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <EditText
+                        android:id="@+id/edit_truck_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_todate"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="Truck Type"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/edit_metarial_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_todate"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="Metarial Type"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/edit_advance"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_todate"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="Advance"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/edit_shortage"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_todate"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="Shortage"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/edit_deduction"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_todate"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="Deduction"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/edit_munsiyana"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_todate"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="Munsiyana"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/edit_commision"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_todate"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="Commision"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <EditText
+                        android:id="@+id/edit_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/edit_todate"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="Other"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view1"
+                android:layout_width="fill_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_view"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                app:cardBackgroundColor="@color/black_metarial"
+                card_view:cardCornerRadius="@dimen/card_album_radius"
+                card_view:contentPadding="10dp">
+
+
+                <LinearLayout
+                    android:id="@+id/midlayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="From State"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="From State"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:id="@+id/tv_fromstate"
+                            android:text="From State"
+                            android:background="@drawable/shape_edit_bg"
+                            android:fontFamily="@font/opensans_regular"
+
+                            android:textColor="@color/black_metarial" />
+
+                        <TextView
+                            android:id="@+id/tv_fromcity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="From State"
+                            android:background="@drawable/shape_edit_bg"
+                            android:fontFamily="@font/opensans_regular"
+
+                            android:textColor="@color/black_metarial" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="To State"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="To City"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:id="@+id/tv_tostate"
+                            android:text="From State"
+                            android:background="@drawable/shape_edit_bg"
+                            android:fontFamily="@font/opensans_regular"
+
+                            android:textColor="@color/black_metarial" />
+
+                        <TextView
+                            android:id="@+id/tv_tocity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="From State"
+
+                            android:background="@drawable/shape_edit_bg"
+                            android:fontFamily="@font/opensans_regular"
+
+                            android:textColor="@color/black_metarial" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/edit_party"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/lintosta"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_edit_bg"
+                        android:fontFamily="@font/opensans_regular"
+                        android:gravity="center"
+                        android:hint="Party"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:id="@+id/bar"
+                        style="@style/AVLoadingIndicatorView.Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        app:indicatorColor="@color/buttoncolor1"
+                        app:indicatorName="BallGridPulseIndicator" />
+
+                    <Button
+                        android:id="@+id/btn_ok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/editrole"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/buttonborder"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="OK"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_text_size" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</LinearLayout>

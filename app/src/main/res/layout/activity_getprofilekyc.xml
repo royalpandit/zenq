@@ -228,8 +228,10 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:visibility="gone"
-                app:indicatorColor="#fa0202"
-                app:indicatorName="BallPulseIndicator" />
+                app:indicatorColor="@color/buttoncolor1"
+                app:indicatorName="BallGridPulseIndicator"
+                style="@style/AVLoadingIndicatorView.Large"
+                />
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>
